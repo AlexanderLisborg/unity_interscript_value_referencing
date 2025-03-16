@@ -1,8 +1,12 @@
+//----------------------------------------------------------------------------
+// Authors : Alexander Lisborg
+//----------------------------------------------------------------------------
+
 /// <summary>
 /// Represents a generic value with an attached event that trigger on value update.
-/// Not thread safe!
+/// NOT THREAD SAFE.
 /// </summary>
-/// <typeparam name="T"></typeparam>
+/// <typeparam name="T">Value type.</typeparam>
 public class ObservableValue<T>
 {
     /// <summary>
@@ -41,7 +45,5 @@ public class ObservableValue<T>
     {
         UpdateValue?.Invoke(Name, v);
         Value = v;
-    }
-
-    
+    }    
 }
